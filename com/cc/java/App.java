@@ -1,6 +1,9 @@
 package com.cc.java;
 
+import java.security.cert.LDAPCertStoreParameters;
+import java.text.CollationElementIterator;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
     
@@ -43,9 +46,25 @@ public class App {
 
         for (String element : carMakers) {
             System.out.print(element + " ");
-
             
         }
+
+        // Daten in AL ersetzen/ Überschreiben
+
+
+        output("");
+        carMakers.set(1, "Audi");
+
+        output("AL: " + carMakers);
+
+        output("");
+        output("---------------Sortierung------------------");
+
+        Collections.sort(carMakers);
+        output("AL: " + carMakers);
+
+
+
 
 
 
